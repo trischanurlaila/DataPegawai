@@ -99,16 +99,18 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
             });
+
+
         }
 
 
         private void doSelect() {
-            tvHasil4.setText("Jabatan : " + spJabatan.getSelectedItem().toString()
+            tvHasil4.setText("Jabatan\t\t\t\t\t\t: " + spJabatan.getSelectedItem().toString()
                     +" bagian "+spBagian.getSelectedItem().toString());
         }
 
         private void doCheck() {
-            String ahli = "Bidang Keahlian: ";
+               String ahli = "Bidang Keahlian\t\t: ";
             int startlen = ahli.length();
             if(cbP.isChecked()) ahli+=cbP.getText()+" ";
             if(cbI.isChecked()) ahli+=cbI.getText()+" ";
@@ -128,14 +130,18 @@ public class MainActivity extends AppCompatActivity
                 if(rgStatus.getCheckedRadioButtonId()!=R.id.radioButtonBM)
                 {
                     EditText etJA = (EditText) findViewById(R.id.editTextJA);
-                    status += " dengan anak berjumlah : " + etJA.getText();
+                    status += "\nJumlah anak\t\t\t\t: " + etJA.getText();
                 }
             }
 
             if (status == null)
             {tvHasil2.setText("Belum memiih Status");}
             else
-            {tvHasil2.setText("Status Anda : " +status);}
+            {
+                tvHasil2.setText("Status Anda\t\t\t\t: " +status);}
+
+
+
         }
 
         private void doProcess() {
@@ -143,7 +149,8 @@ public class MainActivity extends AppCompatActivity
             {
                 String nama = etNama.getText().toString();
                 String pengalaman = etPengalaman.getText().toString();
-                tvHasil.setText("\nNama : " + nama + "\nPengalaman Kerja : " + pengalaman + " tahun");
+                tvHasil.setText("\nNama\t\t\t\t\t\t\t: " + nama +
+                                "\nPengalaman Kerja\t: " + pengalaman + " tahun");
             }
         }
 
